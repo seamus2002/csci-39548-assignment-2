@@ -90,14 +90,29 @@ function selected(){
 }
 
 function fill(){
-    alert("Clicked Fill All")
+    let cells = document.getElementsByTagName("td");
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.backgroundColor = colorSelected;
+    }
+    //alert("Clicked Fill All")
 }
 
 function clearAll(){
-    alert("Clicked Clear All")
+    let cells = document.getElementsByTagName("td");
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.backgroundColor = "";
+    }
+    //alert("Clicked Clear All")
 }
 
 function fillU(){
-    
-    alert("Clicked Fill All Uncolored")
+    let cells = document.getElementsByTagName("td");
+    if (cells.length > 0) {
+        for (let i = 0; i < cells.length; i++) {
+            if (cells[i].style.backgroundColor == "") {
+                cells[i].style.backgroundColor = colorSelected;
+            }
+        }
+    }
+    //alert("Clicked Fill All Uncolored")
 }
