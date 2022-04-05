@@ -94,7 +94,6 @@ function fill(){
     for (let i = 0; i < cells.length; i++) {
         cells[i].style.backgroundColor = colorSelected;
     }
-    //alert("Clicked Fill All")
 }
 
 function clearAll(){
@@ -102,7 +101,6 @@ function clearAll(){
     for (let i = 0; i < cells.length; i++) {
         cells[i].style.backgroundColor = "";
     }
-    //alert("Clicked Clear All")
 }
 
 function fillU(){
@@ -114,5 +112,4 @@ function fillU(){
             }
         }
     }
-    //alert("Clicked Fill All Uncolored")
 }
