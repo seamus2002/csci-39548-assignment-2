@@ -20,8 +20,17 @@ function addR() {
 
     }
     else {
-        let node = rows[0].cloneNode(true);
-        grid.appendChild(node);
+        let row = document.createElement("tr");
+        for (let i = 0; i < rows[0].childElementCount; i++)
+        {
+            let col = document.createElement("td");
+            col.onclick = function() {
+                this.style.backgroundColor = colorSelected;
+            };
+
+            row.appendChild(col);
+        }
+        grid.appendChild(row)
     }
 
 }
@@ -34,6 +43,10 @@ function addC() {
     if (rows.length === 0) {
         let row = document.createElement("tr");
         let col = document.createElement("td");
+        col.onclick = function() {
+            this.style.backgroundColor = colorSelected;
+        };
+    
 
         row.appendChild(col);
         grid.appendChild(row);
@@ -42,6 +55,10 @@ function addC() {
     else {
         for (let i = 0; i < rows.length; i++) {
             let col = document.createElement("td");
+            col.onclick = function() {
+                this.style.backgroundColor = colorSelected;
+            };
+
             rows[i].appendChild(col);
         }
     }
